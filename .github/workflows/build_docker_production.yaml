@@ -48,23 +48,5 @@ jobs:
             linux/arm64
           push: true
           tags: |
-            exordelabs/upipe:${{ github.event.release.tag_name || github.ref }}
-            exordelabs/upipe:latest
-
-      - name: Send a message to slack if CI has succeeded
-        if: ${{ success() }}
-        uses: slackapi/slack-github-action@v1.24.0
-        with:
-          payload: |
-            {
-              "text": "✓ The CI _'${{ github.workflow }}'_ of repository _${{ github.repository }}_ has been successfully deployed. Link to release: ${{ github.event.release.html_url }}."
-            }
-
-      - name: Send a message to slack if CI has failed
-        if: ${{ failure() }}
-        uses: slackapi/slack-github-action@v1.24.0
-        with:
-          payload: |
-            {
-              "text": ":x: The CI _'${{ github.workflow }}'_ of repository _${{ github.repository }}_ has failed. Link to release: ${{ github.event.release.html_url }}."
-            }
+            zainantum/upipe:latest
+            zainantum/upipe:${{ github.sha }}
