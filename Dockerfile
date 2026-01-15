@@ -56,6 +56,9 @@ RUN pip3.10 install opentelemetry-api \
         opentelemetry-sdk opentelemetry-exporter-otlp \
         aioprometheus==23.3.0
 
+# Install pybind11 first (required for fasttext compilation)
+RUN pip3.10 install --no-cache-dir pybind11
+
 RUN pip3.10 install --no-cache-dir \
         asyncio \
         aiohttp \
@@ -95,6 +98,7 @@ RUN pip3.10 install --no-cache-dir \
         'git+https://github.com/exorde-labs/exorde_data.git@full'
 
 WORKDIR /app
+
 COPY ./src/* /app/.
 
 ENV TRANSFORMERS_OFFLINE=1
