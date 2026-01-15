@@ -69,7 +69,7 @@ RUN pip3.10 install --no-cache-dir \
         sentence-transformers==2.2.2 \
         tensorflow==2.12.0 \
         torch==1.13.0 \
-        argostranslate==1.9.6 \
+        argostranslate==1.9.0 \
         wtpsplit==1.3.0 \
         yake==0.4.8 \
         keybert==0.7.0 \
