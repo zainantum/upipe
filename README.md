@@ -13,7 +13,7 @@ services:
     networks:
       - exorde-network
     ports:
-      - "7996-7998:8000"
+      - "7998:8000"
     labels:
       - "network.exorde.monitor=true"
       - "network.exorde.service=upipe"
