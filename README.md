@@ -1,6 +1,7 @@
 # Unit Pipe
 > Unit Processing logic for [exorde-client spotting](https://github.com/exorde-labs/Exorde-Client-Microservice-Mint/tree/main)
-# This upipe for Debian Server and other OS
+# This upipe is for Debian servers and other operating systems that have C2Translate issues
+This image fixes C2Translate issues that caused some languages to fail to be translated into English on Debian servers and other operating systems
 # How to use
 Just change your image from the official upipe image to zainatum/upipe. eg:
 
